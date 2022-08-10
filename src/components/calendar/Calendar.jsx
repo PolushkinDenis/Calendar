@@ -4,7 +4,7 @@ import moment from 'moment'
 import Header from './Header'
 import NavigationWeek from './NavigationWeek'
 import CalendarHour from './CalendarHour'
-import Footer from '../Footer'
+import Footer from './Footer'
 
 const CalendarWrapper = styled.div`
 text-align: center;
