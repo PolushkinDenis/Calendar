@@ -18,6 +18,9 @@ const HeaderTitle = styled.div`
 float: left;
 text-align: left;
 font-size: 24px;
+@media (max-width: 350px) {
+    font-size: 16px;   
+}
 `
 const HeaderPlus = styled.div`
 width: 24px;

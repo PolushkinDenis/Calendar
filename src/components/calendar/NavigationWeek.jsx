@@ -17,6 +17,7 @@ const NavigationDays = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr  1fr  1fr  1fr  1fr;
 align-items: center;
+justify-items: center;
 padding-left: 12.5%;
 `
 const NavigationDaysName = styled.div`
@@ -24,8 +25,6 @@ align-items: center;
 padding: 7px 0;
 font-size: 16px;
 font-weight: bold;
-
-
 @media (min-width: 740px) {
     width: 50px;
     padding-left: 25px;
@@ -35,6 +34,7 @@ const NavigationDaysNumber = styled.div`
 text-align: center;
 height: 50px;
 line-height: 50px;
+width: 50px;
 @media (min-width: 740px) {
     width: 50px;
     margin-left: 25px;
@@ -43,10 +43,17 @@ line-height: 50px;
 font-weight: bold;
 font-size: 26px;
 ${props => props.today && `
-border-radius: 25px;
+border-radius: 50%;
+background-size: 50px 50px;
 background-color: red;
 color: #fff;;
 `}
+@media (max-width: 450px) {
+    font-size: 16px; 
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+}
 `
 const NavigationChangeWeek = styled.div`
 display: flex;
@@ -61,6 +68,9 @@ const NavigationChangeWeekTitile = styled.div`
 font-size: 24px;
 font-weight: bold;
 text-align: center;
+@media (max-width: 450px) {
+    font-size: 16px; 
+}
 `
 const NavigationChangeWeekButtonPrev = styled.div`
 background-image: url(${prevImg});

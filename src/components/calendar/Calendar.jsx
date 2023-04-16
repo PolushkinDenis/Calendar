@@ -105,15 +105,18 @@ const Calendar = () => {
 
     const addData = () => {
         let inputData = window.prompt('Enter event time: YYYY-MM-DD HH:mm:ss');
-        let newData = moment(inputData, 'YYYY-MM-DD HH:mm:ss', true);
-        if (newData.isValid()) {
-            const newListData = [...listData]
-            newListData.push(newData)
-            setListData(newListData)
+        if (inputData !== null) {
+            let newData = moment(inputData, 'YYYY-MM-DD HH:mm:ss', true);
+            if (newData.isValid()) {
+                const newListData = [...listData]
+                newListData.push(newData)
+                setListData(newListData)
+            }
+            else {
+                alert('Не верный формат даты');
+            }
         }
-        else {
-            alert('Не верный формат даты');
-        }
+
     }
 
     const todayClick = () => {
